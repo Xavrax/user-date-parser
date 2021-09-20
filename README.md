@@ -6,7 +6,7 @@
 **User Date Parser** is a simple utility library that provides trait to parse user-friendly strings with
 date identifications (*e.g. tomorrow*) to [`chrono::DateTime<Utc>`](https://docs.rs/chrono/) and vice versa.
 
-Additionally, it includes some languages with simple implementations. [Here](#what-is-it) is a list
+Additionally, it includes some languages with simple implementations. [Here](#supported-build-in-parsers) is a list
 of supported languages.
 
 ## Usage
@@ -93,16 +93,22 @@ struct MyParser;
 
 impl UserDateParser for MyParser {
     fn to_chrono(
+        &self,
         friendly_string: Into<Str>,
         relative_date: Utc
-    ) -> Result<Utc, UserDateParseError> {
+    ) -> Result<Utc, UserDateParseError>
+        where
+            S: Into<Str> {
         // some implementation
     }
 
     fn to_user_friendly(
+        &self,
         chrono_date: Utc,
         relative_date: Utc
-    ) -> Result<Utc, UserDateParseError> {
+    ) -> Result<Utc, UserDateParseError>
+        where
+            S: Into<Str> {
         // some implementation
     }
 }
@@ -110,3 +116,8 @@ impl UserDateParser for MyParser {
 ```
 
 That's it!
+
+## Supported build-in parsers
+
+You can check which languages are supported [here](features/languages). This is directory that contains
+gherkin files with language's features explanation.
