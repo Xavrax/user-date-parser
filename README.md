@@ -1,6 +1,9 @@
 # :warning: Work in progress! :warning:
 # User Date Parser
 
+![Rust](https://github.com/Xavrax/user-date-parser/actions/workflows/rust.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## What is it?
 
 **User Date Parser** is a simple utility library that provides trait to parse user-friendly strings with
