@@ -15,7 +15,7 @@ of supported languages.
 ## Usage
 
 ### built-in functions
-You have to import library in your `Cargo.toml` file then ou can simply use exported functions like this:
+You have to import library in your `Cargo.toml` file then you can simply use exported functions like this:
 
 > Note: you have to use `"en"` feature to use examples below
 
@@ -122,5 +122,11 @@ That's it!
 
 ## Supported build-in parsers
 
-You can check which languages are supported [here](features/languages). This is directory that contains
+You can operate on supported build-in parsers by adding following features:
+
+- `en` - english language
+- `pl` - polish language
+- `full` - all mentioned above
+
+You can find more information about each parser [here](features/languages). This directory contains
 gherkin files with language's features explanation.
